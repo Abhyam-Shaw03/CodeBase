@@ -1,0 +1,169 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 49px;
+  z-index: 1;
+  margin-left: 7%;
+  margin-right: 7%;
+  /*Some experiments*/
+  /* background-color: #ff6b6b; */
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 16px; /* Adds space between the buttons */
+  flex-wrap: wrap; /* Allows buttons to wrap when there's not enough space */
+  justify-content: flex-start; /* Align buttons to the left */
+}
+
+.typing {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--color-primary);
+  font-style: italic; /* Adjust to your theme */
+  font-size: 50px;
+  letter-spacing: 2px;
+  /* text-decoration: underline; */
+}
+
+/* Custom blinking cursor effect for react-simple-typewriter */
+.react-simple-typewriter-cursor {
+  display: inline-block;
+  animation: blink 0.7s step-end infinite;
+  color: var(--color-text); /* Matches the text color */
+  font-weight: bold;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.description {
+  font-size: 25px;
+  font-family: var(--font-roboto);
+  margin-bottom: 52px;
+  color: gold;
+  letter-spacing: 1.5px;
+}
+
+.contactBtn, .downloadBtn {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.contactBtn:hover, .downloadBtn:hover{
+  transform: scale(1.15);
+    background: linear-gradient(45deg, #ff8e53, #ff6b6b);
+    box-shadow: 0 10px 20px rgba(246, 193, 2, 0.805), 0 6px 15px rgba(0, 0, 0, 0.1);
+    /* margin: 20px; */
+}
+
+.heroImg {
+  width: 38%; /* Width in percentage */
+  height: auto; /* Maintain aspect ratio */
+  aspect-ratio: 1 / 1; /* Ensure the container is square */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Crop the image proportionally */
+  z-index: 1;
+  padding-left: 10px;
+
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.topBlur {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.bottomBlur {
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 250px;
+  top: 246px;
+  right: -25vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  .buttonsContainer {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 20px; /* Adds spacing between stacked buttons */
+    align-items: center; /* Center-align buttons */
+  }
+}

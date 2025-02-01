@@ -1,0 +1,153 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    color: var(--color-text);
+    background-color: var(--color-secondary);
+    border-radius: 15px;
+    padding: 15px 50px 40px 5px;
+    margin-top: 90px;
+    z-index: 1;
+    width: 100%;
+}
+
+.content {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.greet {
+    padding: 10px;
+    width: 45%; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.formContainer{
+    padding: 10px;
+    width: 55%;
+    height: auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form label{
+    color: gold;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.button{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    padding: 12px 25px;
+  font-size: 18px;
+  font-weight: 900;
+  color: black;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  
+}
+
+.form input{
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-roboto);
+    padding: 15px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form input:focus, .form textarea:focus {
+    outline: none;
+  border: 2px solid #007bff; /* Change border color on focus */
+  transform: translateY(-6px); /* Lifting effect */
+  box-shadow: 0 10px 20px rgba(246, 193, 2, 0.805), 0 6px 15px rgba(0, 0, 0, 0.1); /* Stronger and more defined shadow on focus */
+}
+
+.form textarea {
+    height: 150px;
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.button:hover{
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff8e53, #ff6b6b);
+    box-shadow: 0 10px 20px rgba(246, 193, 2, 0.805), 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+.greet h2, .form h2 {
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: var(--font-roboto); 
+    background: linear-gradient(45deg, #ff8e53, #ff6b6b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.greet p{
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1.45px;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.socialItem:hover {
+    transform: scale(1.5);
+    /* outline: none; */
+  box-shadow: 0 10px 20px rgba(246, 193, 2, 0.465), 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 830px){
+    .container{
+        padding: 15px 15px 40px 15px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formContainer{
+        padding: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .greet {
+        padding: 10px;
+        width: 100%;  
+    }
+}

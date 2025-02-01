@@ -1,0 +1,10 @@
+[
+    {
+      "title": "PORTFOLIO",
+      "imageSrc": "projects/portfolioCover.png",
+      "description": "This is a project made to showcase my skills on the frontend.",
+      "skills": ["React", "HTML", "CSS"],
+      "demo": "https://abhyam-portfolio.netlify.app/",
+      "source": "https://github.com/Abhyam-Shaw03/portfolio"
+    }
+]
